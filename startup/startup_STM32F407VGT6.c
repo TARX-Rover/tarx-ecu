@@ -13,9 +13,16 @@ extern uint32_t _edata;
 extern uint32_t _sbss;
 extern uint32_t _ebss;
 
+typedef void (*init_function_t)(void);
+extern init_function_t __preinit_array_start[];
+extern init_function_t __preinit_array_end[];
+extern init_function_t __init_array_start[];
+extern init_function_t __init_array_end[];
+
 /** Prototypes **/
 extern int main(void);
 void Reset_handler          (void);
+void Default_handler        (void);
 void NMI_handler            (void)__attribute__((weak, alias("Default_handler")));
 void HardFault_handler      (void)__attribute__((weak, alias("Default_handler")));
 void MemManage_handler      (void)__attribute__((weak, alias("Default_handler")));
@@ -206,6 +213,18 @@ void Reset_handler(void){
     /** Initialize BSS with ZEROES **/
     for(uint32_t *bss_ptr = (uint32_t *)&_sbss; bss_ptr < &_ebss;){
         *bss_ptr++ = 0;
+    }
+
+    /** Run C++ global constructors. **/
+    for(init_function_t *constructor = __preinit_array_start;
+        constructor < __preinit_array_end;
+        ++constructor){
+        (*constructor)();
+    }
+    for(init_function_t *constructor = __init_array_start;
+        constructor < __init_array_end;
+        ++constructor){
+        (*constructor)();
     }
 
     /** CALL main() **/

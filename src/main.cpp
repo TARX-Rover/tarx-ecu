@@ -1,5 +1,5 @@
 /**
- *@file main.c
+ *@file main.cpp
  *@brief Register Level Programming Simple Blink Project using FreeRTOS delayUntil
  **/
 
@@ -12,7 +12,9 @@
 
 #define MODER_WIDTH 2
 
-/* FreeRTOS runtime / linker symbols */
+/* Symbols called from the C startup code and FreeRTOS kernel need C linkage. */
+extern "C" {
+
 uint32_t SystemCoreClock = 16000000UL; /* Required by FreeRTOS port.c for tick timer setup */
 
 /* FreeRTOS hooks */
@@ -33,17 +35,22 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName) {
 
 /* libc minimal helpers */
 void *memcpy(void *dest, const void *src, size_t n) {
-    unsigned char *d = dest;
-    const unsigned char *s = src;
+    unsigned char *d = (unsigned char *)dest;
+    const unsigned char *s = (const unsigned char *)src;
     while (n--) *d++ = *s++;
     return dest;
 }
 
 void *memset(void *s, int c, size_t n) {
-    unsigned char *p = s;
+    unsigned char *p = (unsigned char *)s;
     while (n--) *p++ = (unsigned char)c;
     return s;
 }
+
+} /* extern "C" */
+
+/* FreeRTOS invokes task entry points through its C API. */
+extern "C" {
 
 /* Blink task toggles PD12 every 100 ms using vTaskDelayUntil */
 static void BlinkTask_100ms(void *pvParameters) {
@@ -92,6 +99,8 @@ static void BlinkTask_2000ms(void *pvParameters) {
         vTaskDelayUntil(&xLastWakeTime, xPeriod);
     }
 }
+
+} /* extern "C" */
 
 /* Hardware setup for GPIOD pins PD12..PD15 */
 static void prvSetupHardware(void) {
