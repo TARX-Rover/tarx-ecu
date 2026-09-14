@@ -1,5 +1,6 @@
 # Binaries
 CC = arm-none-eabi-gcc
+GDB ?= arm-none-eabi-gdb
 
 # SRC Directories
 SRC_DIR = src
@@ -39,9 +40,12 @@ CFLAGS = -g -Wall -mcpu=$(MARCH) -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I$(
 # to resolve memcpy/memset and related CRT helpers called by FreeRTOS.
 LFLAGS = -nostdlib -T $(LD) -Wl,-Map=$(DEB_DIR)/main.map -specs=nosys.specs -lc -lgcc
 
-#PATHS
-OPENOCD_INTERFACE = /usr/share/openocd/scripts/interface/stlink-v2.cfg
-OPENOCD_TARGET = /usr/share/openocd/scripts/target/stm32f4x.cfg
+# OpenOCD searches its installed scripts directory automatically. Keeping these
+# paths relative makes them work with Homebrew on both Apple Silicon and Intel
+# Macs, as well as with standard OpenOCD installations on other platforms.
+OPENOCD ?= openocd
+OPENOCD_INTERFACE ?= interface/stlink.cfg
+OPENOCD_TARGET ?= target/stm32f4x.cfg
 
 # Targets
 TARGET = $(DEB_DIR)/main.elf
@@ -73,12 +77,12 @@ mkdeb:
 	mkdir -p $(DEB_DIR)
 
 flash: FORCE
-	openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) &
-	gdb-multiarch $(TARGET) -x $(SUP_DIR)/flash.gdb
+	$(OPENOCD) -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) &
+	$(GDB) $(TARGET) -x $(SUP_DIR)/flash.gdb
 
 debug: FORCE
-	openocd -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) &
-	gdb-multiarch $(TARGET) -x $(SUP_DIR)/debug.gdb
+	$(OPENOCD) -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) &
+	$(GDB) $(TARGET) -x $(SUP_DIR)/debug.gdb
 
 edit: FORCE
 	vim -S Session.vim
