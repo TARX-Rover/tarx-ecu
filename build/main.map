@@ -1,0 +1,525 @@
+
+Discarded input sections
+
+ .group         0x00000000        0x8 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .group         0x00000000        0x8 CMakeFiles/firmware.dir/src/main.cpp.obj
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+SRAM             0x20000000         0x00020000         xrw
+FLASH            0x08000000         0x00100000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD CMakeFiles/firmware.dir/src/main.cpp.obj
+LOAD CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+LOAD CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+START GROUP
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/libgcc.a
+END GROUP
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libstdc++.a
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+START GROUP
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+END GROUP
+START GROUP
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+LOAD /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a
+END GROUP
+                0x20020000                        _estack = (ORIGIN (SRAM) + LENGTH (SRAM))
+
+.isr_vector     0x08000000      0x194
+                0x08000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x194 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+                0x08000000                fpn_vector
+                0x08000194                        . = ALIGN (0x4)
+
+.text           0x08000194     0x7a4c
+                0x08000194                        . = ALIGN (0x4)
+ *(.text)
+ .text          0x08000194      0x310 CMakeFiles/firmware.dir/src/main.cpp.obj
+                0x08000194                vApplicationIdleHook
+                0x080001a2                vApplicationTickHook
+                0x080001b0                vApplicationMallocFailedHook
+                0x080001ce                vApplicationStackOverflowHook
+                0x080001f0                memcpy
+                0x0800023a                memset
+                0x08000400                mcu::example()
+                0x0800041c                main
+ .text          0x080004a4       0xb0 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+                0x080004a4                Reset_handler
+                0x0800054c                EXTI15_10_handler
+                0x0800054c                DMA1_Stream7_handler
+                0x0800054c                UART1_handler
+                0x0800054c                TIM1_UP_TIM10_handler
+                0x0800054c                EXTI0_handler
+                0x0800054c                DMA1_Stream1_handler
+                0x0800054c                SDIO_handler
+                0x0800054c                NMI_handler
+                0x0800054c                DMA2_Stream3_handler
+                0x0800054c                TIM2_handler
+                0x0800054c                SPI3_handler
+                0x0800054c                TIM3_handler
+                0x0800054c                WWDG_handler
+                0x0800054c                UART6_handler
+                0x0800054c                SPI2_handler
+                0x0800054c                UsuageFault_handler
+                0x0800054c                DMA2_Stream6_handler
+                0x0800054c                DebugMonitor_handler
+                0x0800054c                I2C3_ER_handler
+                0x0800054c                DMA1_Stream3_handler
+                0x0800054c                MemManage_handler
+                0x0800054c                SPI4_handler
+                0x0800054c                HardFault_handler
+                0x0800054c                DMA1_Stream5_handler
+                0x0800054c                FPU_handler
+                0x0800054c                DMA2_Stream5_handler
+                0x0800054c                EXITI21_TAMP_STAMP_handler
+                0x0800054c                EXTI18_OTG_FS_WKUP_handler
+                0x0800054c                RCC_handler
+                0x0800054c                EXTI2_handler
+                0x0800054c                DMA2_Stream1_handler
+                0x0800054c                I2C1_ER_handler
+                0x0800054c                EXTI9_5__handler
+                0x0800054c                EXTI17_RTC_Alarm_handler
+                0x0800054c                I2C2_EV_handler
+                0x0800054c                EXITI22_RTC_WKUP_handler
+                0x0800054c                EXTI3_handler
+                0x0800054c                DMA2_Stream0_handler
+                0x0800054c                FLASH_handler
+                0x0800054c                OTG_FS_handler
+                0x0800054c                DMA1_Stream4_handler
+                0x0800054c                I2C2_ER_handler
+                0x0800054c                TIM1_BRK_TIM9_handler
+                0x0800054c                TIM4_handler
+                0x0800054c                DMA1_Stream2_handler
+                0x0800054c                EXTI4_handler
+                0x0800054c                DMA1_Stream6_handler
+                0x0800054c                ADC_handler
+                0x0800054c                I2C1_EV_handler
+                0x0800054c                SPI1_handler
+                0x0800054c                DMA2_Stream4_handler
+                0x0800054c                DMA2_Stream7_handler
+                0x0800054c                DMA1_Stream0_handler
+                0x0800054c                DMA2_Stream2_handler
+                0x0800054c                EXTI1_handler
+                0x0800054c                TIM1_TRG_COM_TIM11_handler
+                0x0800054c                TIM5_handler
+                0x0800054c                EXITI16_PVD__handler
+                0x0800054c                I2C3_EV_handler
+                0x0800054c                BusFault_handler
+                0x0800054c                TIM1_CC_handler
+                0x0800054c                UART2_handler
+                0x0800054c                Default_handler
+ .text          0x08000554        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .text          0x08000554      0x64c CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+                0x08000554                xEventGroupCreate
+                0x08000582                xEventGroupSync
+                0x080006e4                xEventGroupWaitBits
+                0x08000888                xEventGroupClearBits
+                0x080008fa                xEventGroupGetBitsFromISR
+                0x08000942                xEventGroupSetBits
+                0x08000a5e                vEventGroupDelete
+                0x08000ae0                vEventGroupSetBitsCallback
+                0x08000afa                vEventGroupClearBitsCallback
+                0x08000b58                uxEventGroupGetNumber
+                0x08000b84                vEventGroupSetNumber
+ .text          0x08000ba0      0x168 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+                0x08000ba0                vListInitialise
+                0x08000be0                vListInitialiseItem
+                0x08000bfa                vListInsertEnd
+                0x08000c42                vListInsert
+                0x08000cb4                uxListRemove
+ .text          0x08000d08     0x1654 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+                0x08000d08                xQueueGenericReset
+                0x08000e2c                xQueueGenericCreate
+                0x08000f44                xQueueCreateMutex
+                0x08000f74                xQueueGiveMutexRecursive
+                0x08000fde                xQueueTakeMutexRecursive
+                0x0800108c                xQueueCreateCountingSemaphore
+                0x080010ea                xQueueGenericSend
+                0x080012f0                xQueueGenericSendFromISR
+                0x0800144a                xQueueGiveFromISR
+                0x08001592                xQueueReceive
+                0x08001758                xQueueSemaphoreTake
+                0x08001958                xQueuePeek
+                0x08001b08                xQueueReceiveFromISR
+                0x08001c3c                xQueuePeekFromISR
+                0x08001d0c                uxQueueMessagesWaiting
+                0x08001d4a                uxQueueSpacesAvailable
+                0x08001d92                uxQueueMessagesWaitingFromISR
+                0x08001dd0                vQueueDelete
+                0x08001e0e                uxQueueGetQueueNumber
+                0x08001e26                vQueueSetQueueNumber
+                0x08001e42                ucQueueGetQueueType
+                0x08001e5c                uxQueueGetQueueItemSize
+                0x08001e74                uxQueueGetQueueLength
+                0x080020ac                xQueueIsQueueEmptyFromISR
+                0x08002126                xQueueIsQueueFullFromISR
+                0x08002174                vQueueAddToRegistry
+                0x08002214                pcQueueGetName
+                0x08002280                vQueueUnregisterQueue
+                0x080022f4                vQueueWaitForMessageRestricted
+ .text          0x0800235c      0xf7a CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+                0x0800235c                xStreamBufferGenericCreate
+                0x0800245a                vStreamBufferDelete
+                0x080024aa                xStreamBufferReset
+                0x08002536                xStreamBufferResetFromISR
+                0x080025e2                xStreamBufferSetTriggerLevel
+                0x08002640                xStreamBufferSpacesAvailable
+                0x080026b8                xStreamBufferBytesAvailable
+                0x080026f4                xStreamBufferSend
+                0x0800289e                xStreamBufferSendFromISR
+                0x08002a3c                xStreamBufferReceive
+                0x08002b8e                xStreamBufferNextMessageLengthBytes
+                0x08002c1a                xStreamBufferReceiveFromISR
+                0x08002d78                xStreamBufferIsEmpty
+                0x08002dca                xStreamBufferIsFull
+                0x08002e2c                xStreamBufferSendCompletedFromISR
+                0x08002eba                xStreamBufferReceiveCompletedFromISR
+                0x080031ac                uxStreamBufferGetStreamBufferNotificationIndex
+                0x080031e6                vStreamBufferSetStreamBufferNotificationIndex
+                0x08003284                uxStreamBufferGetStreamBufferNumber
+                0x0800329c                vStreamBufferSetStreamBufferNumber
+                0x080032b8                ucStreamBufferGetStreamBufferType
+ *fill*         0x080032d6        0x2 
+ .text          0x080032d8     0x3270 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+                0x08003350                xTaskCreate
+                0x08003610                vTaskDelete
+                0x08003774                xTaskDelayUntil
+                0x08003878                vTaskDelay
+                0x080038e4                eTaskGetState
+                0x080039f4                uxTaskPriorityGet
+                0x08003a48                uxTaskPriorityGetFromISR
+                0x08003ac0                uxTaskBasePriorityGet
+                0x08003b14                uxTaskBasePriorityGetFromISR
+                0x08003b8c                vTaskPrioritySet
+                0x08003d60                vTaskSuspend
+                0x08003f50                vTaskResume
+                0x08004060                xTaskResumeFromISR
+                0x0800424c                vTaskStartScheduler
+                0x080042d4                vTaskEndScheduler
+                0x08004338                vTaskSuspendAll
+                0x08004354                xTaskResumeAll
+                0x08004564                xTaskGetTickCount
+                0x08004584                xTaskGetTickCountFromISR
+                0x080045a8                uxTaskGetNumberOfTasks
+                0x080045c0                pcTaskGetName
+                0x0800460c                uxTaskGetSystemState
+                0x08004728                xTaskCatchUpTicks
+                0x08004780                xTaskIncrementTick
+                0x080049b4                vTaskSwitchContext
+                0x08004a70                vTaskPlaceOnEventList
+                0x08004abc                vTaskPlaceOnUnorderedEventList
+                0x08004b6c                vTaskPlaceOnEventListRestricted
+                0x08004bf8                xTaskRemoveFromEventList
+                0x08004dac                vTaskRemoveFromUnorderedEventList
+                0x08004f34                vTaskSetTimeOutState
+                0x08004f84                vTaskInternalSetTimeOutState
+                0x08004fb0                xTaskCheckForTimeOut
+                0x08005080                vTaskMissedYield
+                0x08005098                uxTaskGetTaskNumber
+                0x080050c4                vTaskSetTaskNumber
+                0x080051f8                vTaskGetInfo
+                0x08005420                xTaskGetCurrentTaskHandle
+                0x08005440                xTaskGetCurrentTaskHandleForCore
+                0x08005470                xTaskGetSchedulerState
+                0x080054ac                xTaskPriorityInherit
+                0x080055ec                xTaskPriorityDisinherit
+                0x0800573c                vTaskPriorityDisinheritAfterTimeout
+                0x080058b4                uxTaskResetEventItemValue
+                0x080058e4                pvTaskIncrementMutexHeldCount
+                0x08005914                ulTaskGenericNotifyTake
+                0x08005a18                xTaskGenericNotifyWait
+                0x08005b50                xTaskGenericNotify
+                0x08005da0                xTaskGenericNotifyFromISR
+                0x08006064                vTaskGenericNotifyGiveFromISR
+                0x08006278                xTaskGenericNotifyStateClear
+                0x0800630c                ulTaskGenericNotifyValueClear
+                0x080064a8                vTaskResetState
+ .text          0x08006548      0x9d0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+                0x08006548                xTimerCreateTimerTask
+                0x080065b0                xTimerCreate
+                0x08006664                xTimerGenericCommandFromTask
+                0x080066f4                xTimerGenericCommandFromISR
+                0x08006764                xTimerGetTimerDaemonTaskHandle
+                0x080067a0                xTimerGetPeriod
+                0x080067da                vTimerSetReloadMode
+                0x08006842                xTimerGetReloadMode
+                0x08006896                uxTimerGetReloadMode
+                0x080068b2                xTimerGetExpiryTime
+                0x080068f0                pcTimerGetName
+                0x08006de8                xTimerIsTimerActive
+                0x08006e3c                pvTimerGetTimerID
+                0x08006e7e                vTimerSetTimerID
+                0x08006ec0                uxTimerGetTimerNumber
+                0x08006ed8                vTimerSetTimerNumber
+                0x08006ef4                vTimerResetState
+ .text          0x08006f18      0x560 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+                0x08006f18                pxPortInitialiseStack
+                0x08006fdc                SVC_Handler
+                0x08007026                xPortStartScheduler
+                0x08007204                vPortEndScheduler
+                0x0800723c                vPortEnterCritical
+                0x080072a0                vPortExitCritical
+                0x080072f4                PendSV_Handler
+                0x08007352                SysTick_Handler
+                0x08007398                vPortSetupTimerInterrupt
+                0x080073f6                vPortValidateInterruptPriority
+ .text          0x08007478      0x6c0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+                0x08007478                pvPortMalloc
+                0x080076e8                vPortFree
+                0x080077d4                xPortGetFreeHeapSize
+                0x080077ec                xPortGetMinimumEverFreeHeapSize
+                0x08007804                xPortResetHeapMinimumEverFreeHeapSize
+                0x08007824                vPortInitialiseBlocks
+                0x08007832                pvPortCalloc
+                0x08007a3c                vPortGetHeapStats
+                0x08007af8                vPortHeapResetState
+ *(.text.*)
+ .text._ZN4GpioC2EP12GPIO_TypeDefm
+                0x08007b38       0x26 CMakeFiles/firmware.dir/src/main.cpp.obj
+                0x08007b38                Gpio::Gpio(GPIO_TypeDef*, unsigned long)
+                0x08007b38                Gpio::Gpio(GPIO_TypeDef*, unsigned long)
+ .text._ZN4Gpio6toggleEv
+                0x08007b5e       0x26 CMakeFiles/firmware.dir/src/main.cpp.obj
+                0x08007b5e                Gpio::toggle()
+ *(.rodata)
+ .rodata        0x08007b84       0x35 CMakeFiles/firmware.dir/src/main.cpp.obj
+ *fill*         0x08007bb9        0x3 
+ .rodata        0x08007bbc        0x9 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ *fill*         0x08007bc5        0x3 
+ .rodata        0x08007bc8        0xd CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ *fill*         0x08007bd5        0x3 
+ .rodata        0x08007bd8        0x4 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .rodata        0x08007bdc        0x4 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+ *(.rodata.*)
+                0x08007be0                        . = ALIGN (0x4)
+
+.glue_7         0x08007be0        0x0
+ .glue_7        0x08007be0        0x0 linker stubs
+
+.glue_7t        0x08007be0        0x0
+ .glue_7t       0x08007be0        0x0 linker stubs
+
+.vfp11_veneer   0x08007be0        0x0
+ .vfp11_veneer  0x08007be0        0x0 linker stubs
+
+.v4_bx          0x08007be0        0x0
+ .v4_bx         0x08007be0        0x0 linker stubs
+
+.iplt           0x08007be0        0x0
+ .iplt          0x08007be0        0x0 CMakeFiles/firmware.dir/src/main.cpp.obj
+
+.rel.dyn        0x08007be0        0x0
+ .rel.iplt      0x08007be0        0x0 CMakeFiles/firmware.dir/src/main.cpp.obj
+
+.preinit_array  0x08007be0        0x0
+                0x08007be0                        . = ALIGN (0x4)
+                0x08007be0                        __preinit_array_start = .
+ *(.preinit_array)
+                0x08007be0                        __preinit_array_end = .
+
+.init_array     0x08007be0        0x0
+                0x08007be0                        . = ALIGN (0x4)
+                0x08007be0                        __init_array_start = .
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                0x08007be0                        __init_array_end = .
+                0x08007be0                        _sidata = LOADADDR (.data)
+
+.data           0x20000000        0x8 load address 0x08007be0
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data)
+ .data          0x20000000        0x4 CMakeFiles/firmware.dir/src/main.cpp.obj
+                0x20000000                SystemCoreClock
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .data          0x20000004        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .data          0x20000004        0x4 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .data          0x20000008        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+ *(.data.*)
+                0x20000008                        . = ALIGN (0x4)
+                0x20000008                        _edata = .
+
+.igot.plt       0x20000008        0x0 load address 0x08007be8
+ .igot.plt      0x20000008        0x0 CMakeFiles/firmware.dir/src/main.cpp.obj
+
+.bss            0x20000008    0x12da4 load address 0x08007be8
+                0x20000008                        . = ALIGN (0x4)
+                0x20000008                        _sbss = .
+ *(.bss)
+ .bss           0x20000008        0x0 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .bss           0x20000008        0x0 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .bss           0x20000008        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .bss           0x20000008        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .bss           0x20000008        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .bss           0x20000008       0x40 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+                0x20000008                xQueueRegistry
+ .bss           0x20000048        0x0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .bss           0x20000048      0x104 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+                0x20000048                pxCurrentTCB
+ .bss           0x2000014c       0x3c CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .bss           0x20000188        0x8 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .bss           0x20000190    0x12c1c CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+ *(.bss.*)
+                0x20012dac                        . = ALIGN (0x4)
+                0x20012dac                        _ebss = .
+OUTPUT(main.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000     0x8857
+ .debug_info    0x00000000      0xace CMakeFiles/firmware.dir/src/main.cpp.obj
+ .debug_info    0x00000ace      0x1f7 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .debug_info    0x00000cc5       0x73 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .debug_info    0x00000d38      0x978 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .debug_info    0x000016b0      0x29f CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .debug_info    0x0000194f     0x1845 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .debug_info    0x00003194     0x1479 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .debug_info    0x0000460d     0x2870 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .debug_info    0x00006e7d      0xeb2 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .debug_info    0x00007d2f      0x564 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_info    0x00008293      0x5c4 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.debug_abbrev   0x00000000     0x199d
+ .debug_abbrev  0x00000000      0x3d6 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .debug_abbrev  0x000003d6       0xfe CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .debug_abbrev  0x000004d4       0x26 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .debug_abbrev  0x000004fa      0x2b1 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .debug_abbrev  0x000007ab       0xec CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .debug_abbrev  0x00000897      0x329 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .debug_abbrev  0x00000bc0      0x2d7 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .debug_abbrev  0x00000e97      0x3a9 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .debug_abbrev  0x00001240      0x2db CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .debug_abbrev  0x0000151b      0x245 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_abbrev  0x00001760      0x23d CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.debug_aranges  0x00000000      0x168
+ .debug_aranges
+                0x00000000       0x30 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .debug_aranges
+                0x00000030       0x20 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .debug_aranges
+                0x00000050       0x18 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .debug_aranges
+                0x00000068       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .debug_aranges
+                0x00000088       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .debug_aranges
+                0x000000a8       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .debug_aranges
+                0x000000c8       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .debug_aranges
+                0x000000e8       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .debug_aranges
+                0x00000108       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .debug_aranges
+                0x00000128       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_aranges
+                0x00000148       0x20 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.debug_rnglists
+                0x00000000       0x3c
+ .debug_rnglists
+                0x00000000       0x20 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .debug_rnglists
+                0x00000020       0x1c CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+
+.debug_line     0x00000000     0x53c4
+ .debug_line    0x00000000      0x50b CMakeFiles/firmware.dir/src/main.cpp.obj
+ .debug_line    0x0000050b      0x151 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .debug_line    0x0000065c       0x7f CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .debug_line    0x000006db      0x5b0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .debug_line    0x00000c8b      0x2a9 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .debug_line    0x00000f34     0x1009 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .debug_line    0x00001f3d      0xaed CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .debug_line    0x00002a2a     0x182f CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .debug_line    0x00004259      0x709 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .debug_line    0x00004962      0x444 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x00004da6      0x61e CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.debug_str      0x00000000     0x32c6
+ .debug_str     0x00000000     0x32c6 CMakeFiles/firmware.dir/src/main.cpp.obj
+                                0x7e3 (size before relaxing)
+ .debug_str     0x000032c6      0x284 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .debug_str     0x000032c6      0x1b6 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .debug_str     0x000032c6      0x6af CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .debug_str     0x000032c6      0x2fa CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .debug_str     0x000032c6      0xbc3 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .debug_str     0x000032c6      0xa0a CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .debug_str     0x000032c6     0x131a CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .debug_str     0x000032c6      0x970 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .debug_str     0x000032c6      0x49a CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_str     0x000032c6      0x573 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.comment        0x00000000       0x46
+ .comment       0x00000000       0x46 CMakeFiles/firmware.dir/src/main.cpp.obj
+                                 0x47 (size before relaxing)
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.ARM.attributes
+                0x00000000       0x34
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .ARM.attributes
+                0x00000034       0x34 CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .ARM.attributes
+                0x00000068       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/croutine.c.obj
+ .ARM.attributes
+                0x0000009c       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .ARM.attributes
+                0x000000d0       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .ARM.attributes
+                0x00000104       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .ARM.attributes
+                0x00000138       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .ARM.attributes
+                0x0000016c       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .ARM.attributes
+                0x000001a0       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .ARM.attributes
+                0x000001d4       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .ARM.attributes
+                0x00000208       0x34 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj
+
+.debug_frame    0x00000000     0x1f88
+ .debug_frame   0x00000000      0x218 CMakeFiles/firmware.dir/src/main.cpp.obj
+ .debug_frame   0x00000218       0x4c CMakeFiles/firmware.dir/startup/startup_STM32F407VGT6.c.obj
+ .debug_frame   0x00000264      0x1d0 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/event_groups.c.obj
+ .debug_frame   0x00000434       0xd8 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/list.c.obj
+ .debug_frame   0x0000050c      0x580 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/queue.c.obj
+ .debug_frame   0x00000a8c      0x424 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/stream_buffer.c.obj
+ .debug_frame   0x00000eb0      0x990 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/tasks.c.obj
+ .debug_frame   0x00001840      0x40c CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/timers.c.obj
+ .debug_frame   0x00001c4c      0x1a8 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_frame   0x00001df4      0x194 CMakeFiles/firmware.dir/thirdparty/FreeRTOS-Kernel/portable/MemMang/heap_4.c.obj

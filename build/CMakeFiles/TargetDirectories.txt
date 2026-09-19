@@ -1,0 +1,6 @@
+/Users/kyrax/Coding/146_STM32F407_ROVER/kyraxCyclicSched/build/CMakeFiles/firmware.dir
+/Users/kyrax/Coding/146_STM32F407_ROVER/kyraxCyclicSched/build/CMakeFiles/flash.dir
+/Users/kyrax/Coding/146_STM32F407_ROVER/kyraxCyclicSched/build/CMakeFiles/openocd-server.dir
+/Users/kyrax/Coding/146_STM32F407_ROVER/kyraxCyclicSched/build/CMakeFiles/gdb.dir
+/Users/kyrax/Coding/146_STM32F407_ROVER/kyraxCyclicSched/build/CMakeFiles/edit_cache.dir
+/Users/kyrax/Coding/146_STM32F407_ROVER/kyraxCyclicSched/build/CMakeFiles/rebuild_cache.dir
