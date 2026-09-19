@@ -45,293 +45,294 @@ END GROUP
                 0x08000000                fpn_vector
                 0x08000194                        . = ALIGN (0x4)
 
-.text           0x08000194     0x79a0
+.text           0x08000194     0x79b0
                 0x08000194                        . = ALIGN (0x4)
  *(.text)
- .text          0x08000194      0x2b0 src/obj/main.o
+ .text          0x08000194      0x2c0 src/obj/main.o
                 0x08000194                vApplicationIdleHook
                 0x080001a2                vApplicationTickHook
                 0x080001b0                vApplicationMallocFailedHook
                 0x080001ce                vApplicationStackOverflowHook
                 0x080001f0                memcpy
                 0x0800023a                memset
-                0x080003c0                main
- .text          0x08000444       0xb0 src/obj/startup_STM32F407VGT6.o
-                0x08000444                Reset_handler
-                0x080004ec                EXTI15_10_handler
-                0x080004ec                DMA1_Stream7_handler
-                0x080004ec                UART1_handler
-                0x080004ec                TIM1_UP_TIM10_handler
-                0x080004ec                EXTI0_handler
-                0x080004ec                DMA1_Stream1_handler
-                0x080004ec                SDIO_handler
-                0x080004ec                NMI_handler
-                0x080004ec                DMA2_Stream3_handler
-                0x080004ec                TIM2_handler
-                0x080004ec                SPI3_handler
-                0x080004ec                TIM3_handler
-                0x080004ec                WWDG_handler
-                0x080004ec                UART6_handler
-                0x080004ec                SPI2_handler
-                0x080004ec                UsuageFault_handler
-                0x080004ec                DMA2_Stream6_handler
-                0x080004ec                DebugMonitor_handler
-                0x080004ec                I2C3_ER_handler
-                0x080004ec                DMA1_Stream3_handler
-                0x080004ec                MemManage_handler
-                0x080004ec                SPI4_handler
-                0x080004ec                HardFault_handler
-                0x080004ec                DMA1_Stream5_handler
-                0x080004ec                FPU_handler
-                0x080004ec                DMA2_Stream5_handler
-                0x080004ec                EXITI21_TAMP_STAMP_handler
-                0x080004ec                EXTI18_OTG_FS_WKUP_handler
-                0x080004ec                RCC_handler
-                0x080004ec                EXTI2_handler
-                0x080004ec                DMA2_Stream1_handler
-                0x080004ec                I2C1_ER_handler
-                0x080004ec                EXTI9_5__handler
-                0x080004ec                EXTI17_RTC_Alarm_handler
-                0x080004ec                I2C2_EV_handler
-                0x080004ec                EXITI22_RTC_WKUP_handler
-                0x080004ec                EXTI3_handler
-                0x080004ec                DMA2_Stream0_handler
-                0x080004ec                FLASH_handler
-                0x080004ec                OTG_FS_handler
-                0x080004ec                DMA1_Stream4_handler
-                0x080004ec                I2C2_ER_handler
-                0x080004ec                TIM1_BRK_TIM9_handler
-                0x080004ec                TIM4_handler
-                0x080004ec                DMA1_Stream2_handler
-                0x080004ec                EXTI4_handler
-                0x080004ec                DMA1_Stream6_handler
-                0x080004ec                ADC_handler
-                0x080004ec                I2C1_EV_handler
-                0x080004ec                SPI1_handler
-                0x080004ec                DMA2_Stream4_handler
-                0x080004ec                DMA2_Stream7_handler
-                0x080004ec                DMA1_Stream0_handler
-                0x080004ec                DMA2_Stream2_handler
-                0x080004ec                EXTI1_handler
-                0x080004ec                TIM1_TRG_COM_TIM11_handler
-                0x080004ec                TIM5_handler
-                0x080004ec                EXITI16_PVD__handler
-                0x080004ec                I2C3_EV_handler
-                0x080004ec                BusFault_handler
-                0x080004ec                TIM1_CC_handler
-                0x080004ec                UART2_handler
-                0x080004ec                Default_handler
- .text          0x080004f4        0x0 src/obj/croutine.o
- .text          0x080004f4      0x64c src/obj/event_groups.o
-                0x080004f4                xEventGroupCreate
-                0x08000522                xEventGroupSync
-                0x08000684                xEventGroupWaitBits
-                0x08000828                xEventGroupClearBits
-                0x0800089a                xEventGroupGetBitsFromISR
-                0x080008e2                xEventGroupSetBits
-                0x080009fe                vEventGroupDelete
-                0x08000a80                vEventGroupSetBitsCallback
-                0x08000a9a                vEventGroupClearBitsCallback
-                0x08000af8                uxEventGroupGetNumber
-                0x08000b24                vEventGroupSetNumber
- .text          0x08000b40      0x168 src/obj/list.o
-                0x08000b40                vListInitialise
-                0x08000b80                vListInitialiseItem
-                0x08000b9a                vListInsertEnd
-                0x08000be2                vListInsert
-                0x08000c54                uxListRemove
- .text          0x08000ca8     0x1654 src/obj/queue.o
-                0x08000ca8                xQueueGenericReset
-                0x08000dcc                xQueueGenericCreate
-                0x08000ee4                xQueueCreateMutex
-                0x08000f14                xQueueGiveMutexRecursive
-                0x08000f7e                xQueueTakeMutexRecursive
-                0x0800102c                xQueueCreateCountingSemaphore
-                0x0800108a                xQueueGenericSend
-                0x08001290                xQueueGenericSendFromISR
-                0x080013ea                xQueueGiveFromISR
-                0x08001532                xQueueReceive
-                0x080016f8                xQueueSemaphoreTake
-                0x080018f8                xQueuePeek
-                0x08001aa8                xQueueReceiveFromISR
-                0x08001bdc                xQueuePeekFromISR
-                0x08001cac                uxQueueMessagesWaiting
-                0x08001cea                uxQueueSpacesAvailable
-                0x08001d32                uxQueueMessagesWaitingFromISR
-                0x08001d70                vQueueDelete
-                0x08001dae                uxQueueGetQueueNumber
-                0x08001dc6                vQueueSetQueueNumber
-                0x08001de2                ucQueueGetQueueType
-                0x08001dfc                uxQueueGetQueueItemSize
-                0x08001e14                uxQueueGetQueueLength
-                0x0800204c                xQueueIsQueueEmptyFromISR
-                0x080020c6                xQueueIsQueueFullFromISR
-                0x08002114                vQueueAddToRegistry
-                0x080021b4                pcQueueGetName
-                0x08002220                vQueueUnregisterQueue
-                0x08002294                vQueueWaitForMessageRestricted
- .text          0x080022fc      0xf7a src/obj/stream_buffer.o
-                0x080022fc                xStreamBufferGenericCreate
-                0x080023fa                vStreamBufferDelete
-                0x0800244a                xStreamBufferReset
-                0x080024d6                xStreamBufferResetFromISR
-                0x08002582                xStreamBufferSetTriggerLevel
-                0x080025e0                xStreamBufferSpacesAvailable
-                0x08002658                xStreamBufferBytesAvailable
-                0x08002694                xStreamBufferSend
-                0x0800283e                xStreamBufferSendFromISR
-                0x080029dc                xStreamBufferReceive
-                0x08002b2e                xStreamBufferNextMessageLengthBytes
-                0x08002bba                xStreamBufferReceiveFromISR
-                0x08002d18                xStreamBufferIsEmpty
-                0x08002d6a                xStreamBufferIsFull
-                0x08002dcc                xStreamBufferSendCompletedFromISR
-                0x08002e5a                xStreamBufferReceiveCompletedFromISR
-                0x0800314c                uxStreamBufferGetStreamBufferNotificationIndex
-                0x08003186                vStreamBufferSetStreamBufferNotificationIndex
-                0x08003224                uxStreamBufferGetStreamBufferNumber
-                0x0800323c                vStreamBufferSetStreamBufferNumber
-                0x08003258                ucStreamBufferGetStreamBufferType
- *fill*         0x08003276        0x2 
- .text          0x08003278     0x3270 src/obj/tasks.o
-                0x080032f0                xTaskCreate
-                0x080035b0                vTaskDelete
-                0x08003714                xTaskDelayUntil
-                0x08003818                vTaskDelay
-                0x08003884                eTaskGetState
-                0x08003994                uxTaskPriorityGet
-                0x080039e8                uxTaskPriorityGetFromISR
-                0x08003a60                uxTaskBasePriorityGet
-                0x08003ab4                uxTaskBasePriorityGetFromISR
-                0x08003b2c                vTaskPrioritySet
-                0x08003d00                vTaskSuspend
-                0x08003ef0                vTaskResume
-                0x08004000                xTaskResumeFromISR
-                0x080041ec                vTaskStartScheduler
-                0x08004274                vTaskEndScheduler
-                0x080042d8                vTaskSuspendAll
-                0x080042f4                xTaskResumeAll
-                0x08004504                xTaskGetTickCount
-                0x08004524                xTaskGetTickCountFromISR
-                0x08004548                uxTaskGetNumberOfTasks
-                0x08004560                pcTaskGetName
-                0x080045ac                uxTaskGetSystemState
-                0x080046c8                xTaskCatchUpTicks
-                0x08004720                xTaskIncrementTick
-                0x08004954                vTaskSwitchContext
-                0x08004a10                vTaskPlaceOnEventList
-                0x08004a5c                vTaskPlaceOnUnorderedEventList
-                0x08004b0c                vTaskPlaceOnEventListRestricted
-                0x08004b98                xTaskRemoveFromEventList
-                0x08004d4c                vTaskRemoveFromUnorderedEventList
-                0x08004ed4                vTaskSetTimeOutState
-                0x08004f24                vTaskInternalSetTimeOutState
-                0x08004f50                xTaskCheckForTimeOut
-                0x08005020                vTaskMissedYield
-                0x08005038                uxTaskGetTaskNumber
-                0x08005064                vTaskSetTaskNumber
-                0x08005198                vTaskGetInfo
-                0x080053c0                xTaskGetCurrentTaskHandle
-                0x080053e0                xTaskGetCurrentTaskHandleForCore
-                0x08005410                xTaskGetSchedulerState
-                0x0800544c                xTaskPriorityInherit
-                0x0800558c                xTaskPriorityDisinherit
-                0x080056dc                vTaskPriorityDisinheritAfterTimeout
-                0x08005854                uxTaskResetEventItemValue
-                0x08005884                pvTaskIncrementMutexHeldCount
-                0x080058b4                ulTaskGenericNotifyTake
-                0x080059b8                xTaskGenericNotifyWait
-                0x08005af0                xTaskGenericNotify
-                0x08005d40                xTaskGenericNotifyFromISR
-                0x08006004                vTaskGenericNotifyGiveFromISR
-                0x08006218                xTaskGenericNotifyStateClear
-                0x080062ac                ulTaskGenericNotifyValueClear
-                0x08006448                vTaskResetState
- .text          0x080064e8      0x9d0 src/obj/timers.o
-                0x080064e8                xTimerCreateTimerTask
-                0x08006550                xTimerCreate
-                0x08006604                xTimerGenericCommandFromTask
-                0x08006694                xTimerGenericCommandFromISR
-                0x08006704                xTimerGetTimerDaemonTaskHandle
-                0x08006740                xTimerGetPeriod
-                0x0800677a                vTimerSetReloadMode
-                0x080067e2                xTimerGetReloadMode
-                0x08006836                uxTimerGetReloadMode
-                0x08006852                xTimerGetExpiryTime
-                0x08006890                pcTimerGetName
-                0x08006d88                xTimerIsTimerActive
-                0x08006ddc                pvTimerGetTimerID
-                0x08006e1e                vTimerSetTimerID
-                0x08006e60                uxTimerGetTimerNumber
-                0x08006e78                vTimerSetTimerNumber
-                0x08006e94                vTimerResetState
- .text          0x08006eb8      0x560 src/obj/port.o
-                0x08006eb8                pxPortInitialiseStack
-                0x08006f7c                SVC_Handler
-                0x08006fc6                xPortStartScheduler
-                0x080071a4                vPortEndScheduler
-                0x080071dc                vPortEnterCritical
-                0x08007240                vPortExitCritical
-                0x08007294                PendSV_Handler
-                0x080072f2                SysTick_Handler
-                0x08007338                vPortSetupTimerInterrupt
-                0x08007396                vPortValidateInterruptPriority
- .text          0x08007418      0x6c0 src/obj/heap_4.o
-                0x08007418                pvPortMalloc
-                0x08007688                vPortFree
-                0x08007774                xPortGetFreeHeapSize
-                0x0800778c                xPortGetMinimumEverFreeHeapSize
-                0x080077a4                xPortResetHeapMinimumEverFreeHeapSize
-                0x080077c4                vPortInitialiseBlocks
-                0x080077d2                pvPortCalloc
-                0x080079dc                vPortGetHeapStats
-                0x08007a98                vPortHeapResetState
+                0x080003c0                mcu::example()
+                0x080003ce                main
+ .text          0x08000454       0xb0 src/obj/startup_STM32F407VGT6.o
+                0x08000454                Reset_handler
+                0x080004fc                EXTI15_10_handler
+                0x080004fc                DMA1_Stream7_handler
+                0x080004fc                UART1_handler
+                0x080004fc                TIM1_UP_TIM10_handler
+                0x080004fc                EXTI0_handler
+                0x080004fc                DMA1_Stream1_handler
+                0x080004fc                SDIO_handler
+                0x080004fc                NMI_handler
+                0x080004fc                DMA2_Stream3_handler
+                0x080004fc                TIM2_handler
+                0x080004fc                SPI3_handler
+                0x080004fc                TIM3_handler
+                0x080004fc                WWDG_handler
+                0x080004fc                UART6_handler
+                0x080004fc                SPI2_handler
+                0x080004fc                UsuageFault_handler
+                0x080004fc                DMA2_Stream6_handler
+                0x080004fc                DebugMonitor_handler
+                0x080004fc                I2C3_ER_handler
+                0x080004fc                DMA1_Stream3_handler
+                0x080004fc                MemManage_handler
+                0x080004fc                SPI4_handler
+                0x080004fc                HardFault_handler
+                0x080004fc                DMA1_Stream5_handler
+                0x080004fc                FPU_handler
+                0x080004fc                DMA2_Stream5_handler
+                0x080004fc                EXITI21_TAMP_STAMP_handler
+                0x080004fc                EXTI18_OTG_FS_WKUP_handler
+                0x080004fc                RCC_handler
+                0x080004fc                EXTI2_handler
+                0x080004fc                DMA2_Stream1_handler
+                0x080004fc                I2C1_ER_handler
+                0x080004fc                EXTI9_5__handler
+                0x080004fc                EXTI17_RTC_Alarm_handler
+                0x080004fc                I2C2_EV_handler
+                0x080004fc                EXITI22_RTC_WKUP_handler
+                0x080004fc                EXTI3_handler
+                0x080004fc                DMA2_Stream0_handler
+                0x080004fc                FLASH_handler
+                0x080004fc                OTG_FS_handler
+                0x080004fc                DMA1_Stream4_handler
+                0x080004fc                I2C2_ER_handler
+                0x080004fc                TIM1_BRK_TIM9_handler
+                0x080004fc                TIM4_handler
+                0x080004fc                DMA1_Stream2_handler
+                0x080004fc                EXTI4_handler
+                0x080004fc                DMA1_Stream6_handler
+                0x080004fc                ADC_handler
+                0x080004fc                I2C1_EV_handler
+                0x080004fc                SPI1_handler
+                0x080004fc                DMA2_Stream4_handler
+                0x080004fc                DMA2_Stream7_handler
+                0x080004fc                DMA1_Stream0_handler
+                0x080004fc                DMA2_Stream2_handler
+                0x080004fc                EXTI1_handler
+                0x080004fc                TIM1_TRG_COM_TIM11_handler
+                0x080004fc                TIM5_handler
+                0x080004fc                EXITI16_PVD__handler
+                0x080004fc                I2C3_EV_handler
+                0x080004fc                BusFault_handler
+                0x080004fc                TIM1_CC_handler
+                0x080004fc                UART2_handler
+                0x080004fc                Default_handler
+ .text          0x08000504        0x0 src/obj/croutine.o
+ .text          0x08000504      0x64c src/obj/event_groups.o
+                0x08000504                xEventGroupCreate
+                0x08000532                xEventGroupSync
+                0x08000694                xEventGroupWaitBits
+                0x08000838                xEventGroupClearBits
+                0x080008aa                xEventGroupGetBitsFromISR
+                0x080008f2                xEventGroupSetBits
+                0x08000a0e                vEventGroupDelete
+                0x08000a90                vEventGroupSetBitsCallback
+                0x08000aaa                vEventGroupClearBitsCallback
+                0x08000b08                uxEventGroupGetNumber
+                0x08000b34                vEventGroupSetNumber
+ .text          0x08000b50      0x168 src/obj/list.o
+                0x08000b50                vListInitialise
+                0x08000b90                vListInitialiseItem
+                0x08000baa                vListInsertEnd
+                0x08000bf2                vListInsert
+                0x08000c64                uxListRemove
+ .text          0x08000cb8     0x1654 src/obj/queue.o
+                0x08000cb8                xQueueGenericReset
+                0x08000ddc                xQueueGenericCreate
+                0x08000ef4                xQueueCreateMutex
+                0x08000f24                xQueueGiveMutexRecursive
+                0x08000f8e                xQueueTakeMutexRecursive
+                0x0800103c                xQueueCreateCountingSemaphore
+                0x0800109a                xQueueGenericSend
+                0x080012a0                xQueueGenericSendFromISR
+                0x080013fa                xQueueGiveFromISR
+                0x08001542                xQueueReceive
+                0x08001708                xQueueSemaphoreTake
+                0x08001908                xQueuePeek
+                0x08001ab8                xQueueReceiveFromISR
+                0x08001bec                xQueuePeekFromISR
+                0x08001cbc                uxQueueMessagesWaiting
+                0x08001cfa                uxQueueSpacesAvailable
+                0x08001d42                uxQueueMessagesWaitingFromISR
+                0x08001d80                vQueueDelete
+                0x08001dbe                uxQueueGetQueueNumber
+                0x08001dd6                vQueueSetQueueNumber
+                0x08001df2                ucQueueGetQueueType
+                0x08001e0c                uxQueueGetQueueItemSize
+                0x08001e24                uxQueueGetQueueLength
+                0x0800205c                xQueueIsQueueEmptyFromISR
+                0x080020d6                xQueueIsQueueFullFromISR
+                0x08002124                vQueueAddToRegistry
+                0x080021c4                pcQueueGetName
+                0x08002230                vQueueUnregisterQueue
+                0x080022a4                vQueueWaitForMessageRestricted
+ .text          0x0800230c      0xf7a src/obj/stream_buffer.o
+                0x0800230c                xStreamBufferGenericCreate
+                0x0800240a                vStreamBufferDelete
+                0x0800245a                xStreamBufferReset
+                0x080024e6                xStreamBufferResetFromISR
+                0x08002592                xStreamBufferSetTriggerLevel
+                0x080025f0                xStreamBufferSpacesAvailable
+                0x08002668                xStreamBufferBytesAvailable
+                0x080026a4                xStreamBufferSend
+                0x0800284e                xStreamBufferSendFromISR
+                0x080029ec                xStreamBufferReceive
+                0x08002b3e                xStreamBufferNextMessageLengthBytes
+                0x08002bca                xStreamBufferReceiveFromISR
+                0x08002d28                xStreamBufferIsEmpty
+                0x08002d7a                xStreamBufferIsFull
+                0x08002ddc                xStreamBufferSendCompletedFromISR
+                0x08002e6a                xStreamBufferReceiveCompletedFromISR
+                0x0800315c                uxStreamBufferGetStreamBufferNotificationIndex
+                0x08003196                vStreamBufferSetStreamBufferNotificationIndex
+                0x08003234                uxStreamBufferGetStreamBufferNumber
+                0x0800324c                vStreamBufferSetStreamBufferNumber
+                0x08003268                ucStreamBufferGetStreamBufferType
+ *fill*         0x08003286        0x2 
+ .text          0x08003288     0x3270 src/obj/tasks.o
+                0x08003300                xTaskCreate
+                0x080035c0                vTaskDelete
+                0x08003724                xTaskDelayUntil
+                0x08003828                vTaskDelay
+                0x08003894                eTaskGetState
+                0x080039a4                uxTaskPriorityGet
+                0x080039f8                uxTaskPriorityGetFromISR
+                0x08003a70                uxTaskBasePriorityGet
+                0x08003ac4                uxTaskBasePriorityGetFromISR
+                0x08003b3c                vTaskPrioritySet
+                0x08003d10                vTaskSuspend
+                0x08003f00                vTaskResume
+                0x08004010                xTaskResumeFromISR
+                0x080041fc                vTaskStartScheduler
+                0x08004284                vTaskEndScheduler
+                0x080042e8                vTaskSuspendAll
+                0x08004304                xTaskResumeAll
+                0x08004514                xTaskGetTickCount
+                0x08004534                xTaskGetTickCountFromISR
+                0x08004558                uxTaskGetNumberOfTasks
+                0x08004570                pcTaskGetName
+                0x080045bc                uxTaskGetSystemState
+                0x080046d8                xTaskCatchUpTicks
+                0x08004730                xTaskIncrementTick
+                0x08004964                vTaskSwitchContext
+                0x08004a20                vTaskPlaceOnEventList
+                0x08004a6c                vTaskPlaceOnUnorderedEventList
+                0x08004b1c                vTaskPlaceOnEventListRestricted
+                0x08004ba8                xTaskRemoveFromEventList
+                0x08004d5c                vTaskRemoveFromUnorderedEventList
+                0x08004ee4                vTaskSetTimeOutState
+                0x08004f34                vTaskInternalSetTimeOutState
+                0x08004f60                xTaskCheckForTimeOut
+                0x08005030                vTaskMissedYield
+                0x08005048                uxTaskGetTaskNumber
+                0x08005074                vTaskSetTaskNumber
+                0x080051a8                vTaskGetInfo
+                0x080053d0                xTaskGetCurrentTaskHandle
+                0x080053f0                xTaskGetCurrentTaskHandleForCore
+                0x08005420                xTaskGetSchedulerState
+                0x0800545c                xTaskPriorityInherit
+                0x0800559c                xTaskPriorityDisinherit
+                0x080056ec                vTaskPriorityDisinheritAfterTimeout
+                0x08005864                uxTaskResetEventItemValue
+                0x08005894                pvTaskIncrementMutexHeldCount
+                0x080058c4                ulTaskGenericNotifyTake
+                0x080059c8                xTaskGenericNotifyWait
+                0x08005b00                xTaskGenericNotify
+                0x08005d50                xTaskGenericNotifyFromISR
+                0x08006014                vTaskGenericNotifyGiveFromISR
+                0x08006228                xTaskGenericNotifyStateClear
+                0x080062bc                ulTaskGenericNotifyValueClear
+                0x08006458                vTaskResetState
+ .text          0x080064f8      0x9d0 src/obj/timers.o
+                0x080064f8                xTimerCreateTimerTask
+                0x08006560                xTimerCreate
+                0x08006614                xTimerGenericCommandFromTask
+                0x080066a4                xTimerGenericCommandFromISR
+                0x08006714                xTimerGetTimerDaemonTaskHandle
+                0x08006750                xTimerGetPeriod
+                0x0800678a                vTimerSetReloadMode
+                0x080067f2                xTimerGetReloadMode
+                0x08006846                uxTimerGetReloadMode
+                0x08006862                xTimerGetExpiryTime
+                0x080068a0                pcTimerGetName
+                0x08006d98                xTimerIsTimerActive
+                0x08006dec                pvTimerGetTimerID
+                0x08006e2e                vTimerSetTimerID
+                0x08006e70                uxTimerGetTimerNumber
+                0x08006e88                vTimerSetTimerNumber
+                0x08006ea4                vTimerResetState
+ .text          0x08006ec8      0x560 src/obj/port.o
+                0x08006ec8                pxPortInitialiseStack
+                0x08006f8c                SVC_Handler
+                0x08006fd6                xPortStartScheduler
+                0x080071b4                vPortEndScheduler
+                0x080071ec                vPortEnterCritical
+                0x08007250                vPortExitCritical
+                0x080072a4                PendSV_Handler
+                0x08007302                SysTick_Handler
+                0x08007348                vPortSetupTimerInterrupt
+                0x080073a6                vPortValidateInterruptPriority
+ .text          0x08007428      0x6c0 src/obj/heap_4.o
+                0x08007428                pvPortMalloc
+                0x08007698                vPortFree
+                0x08007784                xPortGetFreeHeapSize
+                0x0800779c                xPortGetMinimumEverFreeHeapSize
+                0x080077b4                xPortResetHeapMinimumEverFreeHeapSize
+                0x080077d4                vPortInitialiseBlocks
+                0x080077e2                pvPortCalloc
+                0x080079ec                vPortGetHeapStats
+                0x08007aa8                vPortHeapResetState
  *(.text.*)
  *(.rodata)
- .rodata        0x08007ad8       0x35 src/obj/main.o
- *fill*         0x08007b0d        0x3 
- .rodata        0x08007b10        0x9 src/obj/tasks.o
- *fill*         0x08007b19        0x3 
- .rodata        0x08007b1c        0xd src/obj/timers.o
+ .rodata        0x08007ae8       0x35 src/obj/main.o
+ *fill*         0x08007b1d        0x3 
+ .rodata        0x08007b20        0x9 src/obj/tasks.o
  *fill*         0x08007b29        0x3 
- .rodata        0x08007b2c        0x4 src/obj/port.o
- .rodata        0x08007b30        0x4 src/obj/heap_4.o
+ .rodata        0x08007b2c        0xd src/obj/timers.o
+ *fill*         0x08007b39        0x3 
+ .rodata        0x08007b3c        0x4 src/obj/port.o
+ .rodata        0x08007b40        0x4 src/obj/heap_4.o
  *(.rodata.*)
-                0x08007b34                        . = ALIGN (0x4)
+                0x08007b44                        . = ALIGN (0x4)
 
-.glue_7         0x08007b34        0x0
- .glue_7        0x08007b34        0x0 linker stubs
+.glue_7         0x08007b44        0x0
+ .glue_7        0x08007b44        0x0 linker stubs
 
-.glue_7t        0x08007b34        0x0
- .glue_7t       0x08007b34        0x0 linker stubs
+.glue_7t        0x08007b44        0x0
+ .glue_7t       0x08007b44        0x0 linker stubs
 
-.vfp11_veneer   0x08007b34        0x0
- .vfp11_veneer  0x08007b34        0x0 linker stubs
+.vfp11_veneer   0x08007b44        0x0
+ .vfp11_veneer  0x08007b44        0x0 linker stubs
 
-.v4_bx          0x08007b34        0x0
- .v4_bx         0x08007b34        0x0 linker stubs
+.v4_bx          0x08007b44        0x0
+ .v4_bx         0x08007b44        0x0 linker stubs
 
-.iplt           0x08007b34        0x0
- .iplt          0x08007b34        0x0 src/obj/main.o
+.iplt           0x08007b44        0x0
+ .iplt          0x08007b44        0x0 src/obj/main.o
 
-.rel.dyn        0x08007b34        0x0
- .rel.iplt      0x08007b34        0x0 src/obj/main.o
+.rel.dyn        0x08007b44        0x0
+ .rel.iplt      0x08007b44        0x0 src/obj/main.o
 
-.preinit_array  0x08007b34        0x0
-                0x08007b34                        . = ALIGN (0x4)
-                0x08007b34                        __preinit_array_start = .
+.preinit_array  0x08007b44        0x0
+                0x08007b44                        . = ALIGN (0x4)
+                0x08007b44                        __preinit_array_start = .
  *(.preinit_array)
-                0x08007b34                        __preinit_array_end = .
+                0x08007b44                        __preinit_array_end = .
 
-.init_array     0x08007b34        0x0
-                0x08007b34                        . = ALIGN (0x4)
-                0x08007b34                        __init_array_start = .
+.init_array     0x08007b44        0x0
+                0x08007b44                        . = ALIGN (0x4)
+                0x08007b44                        __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x08007b34                        __init_array_end = .
-                0x08007b34                        _sidata = LOADADDR (.data)
+                0x08007b44                        __init_array_end = .
+                0x08007b44                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x8 load address 0x08007b34
+.data           0x20000000        0x8 load address 0x08007b44
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -351,10 +352,10 @@ END GROUP
                 0x20000008                        . = ALIGN (0x4)
                 0x20000008                        _edata = .
 
-.igot.plt       0x20000008        0x0 load address 0x08007b3c
+.igot.plt       0x20000008        0x0 load address 0x08007b4c
  .igot.plt      0x20000008        0x0 src/obj/main.o
 
-.bss            0x20000008    0x12da4 load address 0x08007b3c
+.bss            0x20000008    0x12da4 load address 0x08007b4c
                 0x20000008                        . = ALIGN (0x4)
                 0x20000008                        _sbss = .
  *(.bss)
@@ -377,31 +378,31 @@ END GROUP
 OUTPUT(debug/main.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000     0x8466
- .debug_info    0x00000000      0x6dd src/obj/main.o
- .debug_info    0x000006dd      0x1f7 src/obj/startup_STM32F407VGT6.o
- .debug_info    0x000008d4       0x73 src/obj/croutine.o
- .debug_info    0x00000947      0x978 src/obj/event_groups.o
- .debug_info    0x000012bf      0x29f src/obj/list.o
- .debug_info    0x0000155e     0x1845 src/obj/queue.o
- .debug_info    0x00002da3     0x1479 src/obj/stream_buffer.o
- .debug_info    0x0000421c     0x2870 src/obj/tasks.o
- .debug_info    0x00006a8c      0xeb2 src/obj/timers.o
- .debug_info    0x0000793e      0x564 src/obj/port.o
- .debug_info    0x00007ea2      0x5c4 src/obj/heap_4.o
+.debug_info     0x00000000     0x848e
+ .debug_info    0x00000000      0x705 src/obj/main.o
+ .debug_info    0x00000705      0x1f7 src/obj/startup_STM32F407VGT6.o
+ .debug_info    0x000008fc       0x73 src/obj/croutine.o
+ .debug_info    0x0000096f      0x978 src/obj/event_groups.o
+ .debug_info    0x000012e7      0x29f src/obj/list.o
+ .debug_info    0x00001586     0x1845 src/obj/queue.o
+ .debug_info    0x00002dcb     0x1479 src/obj/stream_buffer.o
+ .debug_info    0x00004244     0x2870 src/obj/tasks.o
+ .debug_info    0x00006ab4      0xeb2 src/obj/timers.o
+ .debug_info    0x00007966      0x564 src/obj/port.o
+ .debug_info    0x00007eca      0x5c4 src/obj/heap_4.o
 
-.debug_abbrev   0x00000000     0x1844
- .debug_abbrev  0x00000000      0x27d src/obj/main.o
- .debug_abbrev  0x0000027d       0xfe src/obj/startup_STM32F407VGT6.o
- .debug_abbrev  0x0000037b       0x26 src/obj/croutine.o
- .debug_abbrev  0x000003a1      0x2b1 src/obj/event_groups.o
- .debug_abbrev  0x00000652       0xec src/obj/list.o
- .debug_abbrev  0x0000073e      0x329 src/obj/queue.o
- .debug_abbrev  0x00000a67      0x2d7 src/obj/stream_buffer.o
- .debug_abbrev  0x00000d3e      0x3a9 src/obj/tasks.o
- .debug_abbrev  0x000010e7      0x2db src/obj/timers.o
- .debug_abbrev  0x000013c2      0x245 src/obj/port.o
- .debug_abbrev  0x00001607      0x23d src/obj/heap_4.o
+.debug_abbrev   0x00000000     0x1875
+ .debug_abbrev  0x00000000      0x2ae src/obj/main.o
+ .debug_abbrev  0x000002ae       0xfe src/obj/startup_STM32F407VGT6.o
+ .debug_abbrev  0x000003ac       0x26 src/obj/croutine.o
+ .debug_abbrev  0x000003d2      0x2b1 src/obj/event_groups.o
+ .debug_abbrev  0x00000683       0xec src/obj/list.o
+ .debug_abbrev  0x0000076f      0x329 src/obj/queue.o
+ .debug_abbrev  0x00000a98      0x2d7 src/obj/stream_buffer.o
+ .debug_abbrev  0x00000d6f      0x3a9 src/obj/tasks.o
+ .debug_abbrev  0x00001118      0x2db src/obj/timers.o
+ .debug_abbrev  0x000013f3      0x245 src/obj/port.o
+ .debug_abbrev  0x00001638      0x23d src/obj/heap_4.o
 
 .debug_aranges  0x00000000      0x158
  .debug_aranges
@@ -427,32 +428,32 @@ LOAD linker stubs
  .debug_aranges
                 0x00000138       0x20 src/obj/heap_4.o
 
-.debug_line     0x00000000     0x4c0e
- .debug_line    0x00000000      0x2e6 src/obj/main.o
- .debug_line    0x000002e6      0x118 src/obj/startup_STM32F407VGT6.o
- .debug_line    0x000003fe       0x46 src/obj/croutine.o
- .debug_line    0x00000444      0x505 src/obj/event_groups.o
- .debug_line    0x00000949      0x1fe src/obj/list.o
- .debug_line    0x00000b47      0xf5e src/obj/queue.o
- .debug_line    0x00001aa5      0xa42 src/obj/stream_buffer.o
- .debug_line    0x000024e7     0x1784 src/obj/tasks.o
- .debug_line    0x00003c6b      0x65e src/obj/timers.o
- .debug_line    0x000042c9      0x3d2 src/obj/port.o
- .debug_line    0x0000469b      0x573 src/obj/heap_4.o
+.debug_line     0x00000000     0x4c17
+ .debug_line    0x00000000      0x2ef src/obj/main.o
+ .debug_line    0x000002ef      0x118 src/obj/startup_STM32F407VGT6.o
+ .debug_line    0x00000407       0x46 src/obj/croutine.o
+ .debug_line    0x0000044d      0x505 src/obj/event_groups.o
+ .debug_line    0x00000952      0x1fe src/obj/list.o
+ .debug_line    0x00000b50      0xf5e src/obj/queue.o
+ .debug_line    0x00001aae      0xa42 src/obj/stream_buffer.o
+ .debug_line    0x000024f0     0x1784 src/obj/tasks.o
+ .debug_line    0x00003c74      0x65e src/obj/timers.o
+ .debug_line    0x000042d2      0x3d2 src/obj/port.o
+ .debug_line    0x000046a4      0x573 src/obj/heap_4.o
 
-.debug_str      0x00000000     0x2ebe
- .debug_str     0x00000000     0x2ebe src/obj/main.o
-                                0x556 (size before relaxing)
- .debug_str     0x00002ebe      0x245 src/obj/startup_STM32F407VGT6.o
- .debug_str     0x00002ebe      0x177 src/obj/croutine.o
- .debug_str     0x00002ebe      0x670 src/obj/event_groups.o
- .debug_str     0x00002ebe      0x2bb src/obj/list.o
- .debug_str     0x00002ebe      0xb84 src/obj/queue.o
- .debug_str     0x00002ebe      0x9cb src/obj/stream_buffer.o
- .debug_str     0x00002ebe     0x12db src/obj/tasks.o
- .debug_str     0x00002ebe      0x931 src/obj/timers.o
- .debug_str     0x00002ebe      0x45b src/obj/port.o
- .debug_str     0x00002ebe      0x534 src/obj/heap_4.o
+.debug_str      0x00000000     0x2ed8
+ .debug_str     0x00000000     0x2ed8 src/obj/main.o
+                                0x570 (size before relaxing)
+ .debug_str     0x00002ed8      0x245 src/obj/startup_STM32F407VGT6.o
+ .debug_str     0x00002ed8      0x177 src/obj/croutine.o
+ .debug_str     0x00002ed8      0x670 src/obj/event_groups.o
+ .debug_str     0x00002ed8      0x2bb src/obj/list.o
+ .debug_str     0x00002ed8      0xb84 src/obj/queue.o
+ .debug_str     0x00002ed8      0x9cb src/obj/stream_buffer.o
+ .debug_str     0x00002ed8     0x12db src/obj/tasks.o
+ .debug_str     0x00002ed8      0x931 src/obj/timers.o
+ .debug_str     0x00002ed8      0x45b src/obj/port.o
+ .debug_str     0x00002ed8      0x534 src/obj/heap_4.o
 
 .comment        0x00000000       0x46
  .comment       0x00000000       0x46 src/obj/main.o
@@ -493,17 +494,17 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000208       0x34 src/obj/heap_4.o
 
-.debug_frame    0x00000000     0x1f10
- .debug_frame   0x00000000      0x1a0 src/obj/main.o
- .debug_frame   0x000001a0       0x4c src/obj/startup_STM32F407VGT6.o
- .debug_frame   0x000001ec      0x1d0 src/obj/event_groups.o
- .debug_frame   0x000003bc       0xd8 src/obj/list.o
- .debug_frame   0x00000494      0x580 src/obj/queue.o
- .debug_frame   0x00000a14      0x424 src/obj/stream_buffer.o
- .debug_frame   0x00000e38      0x990 src/obj/tasks.o
- .debug_frame   0x000017c8      0x40c src/obj/timers.o
- .debug_frame   0x00001bd4      0x1a8 src/obj/port.o
- .debug_frame   0x00001d7c      0x194 src/obj/heap_4.o
+.debug_frame    0x00000000     0x1f30
+ .debug_frame   0x00000000      0x1c0 src/obj/main.o
+ .debug_frame   0x000001c0       0x4c src/obj/startup_STM32F407VGT6.o
+ .debug_frame   0x0000020c      0x1d0 src/obj/event_groups.o
+ .debug_frame   0x000003dc       0xd8 src/obj/list.o
+ .debug_frame   0x000004b4      0x580 src/obj/queue.o
+ .debug_frame   0x00000a34      0x424 src/obj/stream_buffer.o
+ .debug_frame   0x00000e58      0x990 src/obj/tasks.o
+ .debug_frame   0x000017e8      0x40c src/obj/timers.o
+ .debug_frame   0x00001bf4      0x1a8 src/obj/port.o
+ .debug_frame   0x00001d9c      0x194 src/obj/heap_4.o
 
 .debug_rnglists
                 0x00000000       0x1c

@@ -5,12 +5,33 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include <cstdint>
+#include <cstddef>
+
 #include "stm32f4xx.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
 
 #define MODER_WIDTH 2
+
+class Gpio{
+public:
+    Gpio(GPIO_TypeDef *gpio_port, std::uint32_t pin_mask)
+        : port{gpio_port}, mask{pin_mask} {}
+
+    void toggle(){
+        (port->ODR) ^= mask;
+    }
+
+    void write(bool value){
+        (port->BSRR) = value ? mask : (mask << 16);
+    }
+
+private:
+    GPIO_TypeDef *port;
+    std::uint32_t mask;
+};
 
 /* Symbols called from the C startup code and FreeRTOS kernel need C linkage. */
 extern "C" {
@@ -58,8 +79,11 @@ static void BlinkTask_100ms(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     const TickType_t xPeriod = pdMS_TO_TICKS(100);
 
+    Gpio led1{GPIOD, (1 << 12U)};
+
     for(;;) {
-        GPIOD->ODR ^= (1 << 12);
+        //GPIOD->ODR ^= (1 << 12);
+        led1.toggle();
         vTaskDelayUntil(&xLastWakeTime, xPeriod);
     }
 }
@@ -70,8 +94,9 @@ static void BlinkTask_500ms(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     const TickType_t xPeriod = pdMS_TO_TICKS(500);
 
+    Gpio led2{GPIOD, (1 << 13U)};
     for(;;) {
-        GPIOD->ODR ^= (1 << 13);
+        led2.toggle();
         vTaskDelayUntil(&xLastWakeTime, xPeriod);
     }
 }
@@ -82,8 +107,9 @@ static void BlinkTask_1000ms(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     const TickType_t xPeriod = pdMS_TO_TICKS(1000);
 
+    Gpio led3{GPIOD, (1 << 14U)};
     for(;;) {
-        GPIOD->ODR ^= (1 << 14);
+        led3.toggle();
         vTaskDelayUntil(&xLastWakeTime, xPeriod);
     }
 }
@@ -94,8 +120,9 @@ static void BlinkTask_2000ms(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     const TickType_t xPeriod = pdMS_TO_TICKS(2000);
 
+    Gpio led4{GPIOD, (1 << 15U)};
     for(;;) {
-        GPIOD->ODR ^= (1 << 15);
+        led4.toggle();
         vTaskDelayUntil(&xLastWakeTime, xPeriod);
     }
 }
@@ -112,12 +139,23 @@ static void prvSetupHardware(void) {
     }
 }
 
+namespace mcu{
+    void example(){
+        std::uint32_t reg_val{40'000'000U};
+
+    }
+}
+
+
+
 /**
  *@brief Main entry point
  **/
 int main(void) {
 
     prvSetupHardware();
+
+    mcu::example();
 
     // Create separate blink tasks
     xTaskCreate(BlinkTask_100ms,  "Blink_100ms",  configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
